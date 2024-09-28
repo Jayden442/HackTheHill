@@ -59,9 +59,9 @@
 
 
   <h1>Welcome to our fitness section!</h1>
-    <h2>Whether you’re a seasoned athlete or just starting your fitness journey, we’re here to support you every step of the way. Fitness is not just about working out; it’s a holistic approach to maintaining a healthy and balanced lifestyle. Our comprehensive guide covers essential aspects of fitness, including hydration, nutrition, and exercise, to help you achieve your goals and feel your best.
+    <h2 class = "yap">Whether you’re a seasoned athlete or just starting your fitness journey, we’re here to support you every step of the way. Fitness is not just about working out; it’s a holistic approach to maintaining a healthy and balanced lifestyle. Our comprehensive guide covers essential aspects of fitness, including hydration, nutrition, and exercise, to help you achieve your goals and feel your best.
     </h2>
-    <h4><ul>
+    <h4 class = "list"><ul class = "list">
         <li>
         Hydration: Maintaining healthy hydration levels is crucial for optimal performance and recovery. Learn how to stay hydrated and calculate your required water intake.
         </li>
@@ -77,23 +77,62 @@
   <div class="container">
     <div class="column">
       <div class="button deodorant">Hydration</div>
-      <p class="text hide1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor dui sit amet tellus convallis condimentum a eget odio. Etiam id est et ex tristique consectetur. Maecenas condimentum volutpat eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur varius fringilla facilisis.</p>
+      <div class = "text hide1">
+      <p class="hide1"><div><h3 class = "hide1">Maintaining healthy hydration levels is crucial. Drink fluids throughout the day, especially during and after exercise, to ensure optimal performance and recovery.<br><br> Below, you may input information to find your own required water intake using our calculator. </h3>
+    <h1 class = "calcHeader hide1">Calculator</h1> <input type="button" value="Calculate" class = "calcButton" onclick="waterIntake()"><p class = "hide1" id = "waterCalculator"></p></p>
+</div>
+</div>
     </div>
     
     <div class="column">
       <div class="button shampoo">Nutrition</div>
-      <p class="text hide2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor dui sit amet tellus convallis condimentum a eget odio. Etiam id est et ex tristique consectetur. Maecenas condimentum volutpat eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur varius fringilla facilisis.</p>
+      <div class = "text hide2">
+      <h3>Support your fitness program with a balanced diet. All food groups are essential for sustaining energy levels and maximising workout benefits. 
+        Carbohydrates fuel your muscles before exercise and replenish glycogen stores afterward. Protein aids in muscle recovery, tissue repair, and muscle mass building. Healthy fats help burn body fat and preserve muscle fuel during workouts, extending your energy. 
+        <br><br>
+        Below, you may input your information to find your mandatory amount of calories needed per day. This will be your base, you may judge your goals accordingly from this calculator. 
+        </h3>
+      <p class="hide2"><h1 class = "calcHeader">Calculator</h1><br><br>
+        
+        
+        <form action="/action_page.php">
+          <label for="gender" class = "enterGender">Enter your biological sex:</label>
+          <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <br><br>
+          <input type="button" value="Submit" class = "calcButton" onclick="foodCal()">
+        </form>
+        
+        <p id="calorieOutput"></p>
+    </div>
     </div>
     
     <div class="column">
       <div class="button habits">Exercise/Activities</div>
-      <p class="text hide3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor dui sit amet tellus convallis condimentum a eget odio. Etiam id est et ex tristique consectetur. Maecenas condimentum volutpat eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur varius fringilla facilisis.</p>
+      <div class = "text hide3">
+        
+      <p class = "hide3"><h2 class = "exercise">Steps for a Successful Workout</h2><h4>1. Warm Up</h4>
+        <h3 >Warming up before your workout can prevent injuries and enhance athletic performance. It also improves flexibility and reduces post-workout soreness. Start with aerobic exercises like 
+        arm swings and rotations
+         leg stretches
+         Lunges and Squats
+         walking before running.</h3>
+        <h4 >2. Cool Down</h4>
+        <h3>Cooling down helps your body return to its normal state. Spend a few minutes cooling down to restore normal breathing patterns and reduce muscle soreness. Light walking after aerobic exercise or stretching after resistance training are good cool-down options.</h3>
+       <h4> 3. Listen to Your Body</h4>
+       <h3>Be mindful of your limits, especially if you’re new to working out daily and having a routine. If you experience pain or discomfort, stop and rest before continuing. Pushing through pain can lead to injuries. Remember, progressing gradually through your fitness program helps you maintain your routine long-term and achieve the best results.</h3>
     </div>
-  </div>
 
+        </p>
+    </div>
+  
   
 
   <script src="scripts.js"></script>
+  <script src = "calcScripts.js"></script>
 </body>
 
 </html>
