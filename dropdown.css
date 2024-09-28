@@ -1,0 +1,21 @@
+.hide1{
+    display: none;
+}
+.hide2{
+    display: none;
+}
+.hide3{
+    display: none;
+}
+
+.deodorant:hover + .hide1{
+    display: block;
+}
+
+.shampoo:hover + .hide2{
+    display: block;
+}
+
+.habits:hover + .hide3{
+    display: block;
+}
