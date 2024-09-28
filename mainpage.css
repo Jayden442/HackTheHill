@@ -1,0 +1,111 @@
+.header{
+    cursor: pointer;
+    line-height: 65px;
+
+    border: 1px solid #000000;
+    height: 64px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.hide{
+    border:1px solid black;
+}
+
+.hidden1{
+    display: none;
+}
+
+.hidden2{
+    display: none;
+}
+
+.hidden3{
+    display: none;
+}
+
+.hidden4{
+    display: none;
+}
+
+.hidden5{
+    display: none;
+}
+
+.fitness:hover + .hidden1{
+    position: fixed;
+    top: 7%;
+    
+    width: 19.4%;
+    display: inline-block;
+}
+
+.mental:hover + .hidden2{
+    position: fixed;
+    top: 7%;
+    left: 20%;
+    width: 19.9%;
+    display: inline-block;
+}
+
+.habits:hover + .hidden3{
+    position: fixed;
+    top: 7%;
+    left: 40%;
+    width: 19.9%;
+    display: inline-block;
+}
+
+.skin:hover + .hidden4{
+    position:fixed;
+    top: 7%;
+    left: 60%;
+    width: 19.9%;
+    display:inline-block;
+}
+
+.about:hover + .hidden5{
+    position:fixed;
+    top: 7%;
+    left:80%;
+    width: 19.9%;
+    display:inline-block;
+}
+
+.fitness{
+    position: fixed;
+    
+    text-align: center;
+    display:inline-block;
+    width: 19.4%
+    
+}
+
+.mental{
+    position: fixed;
+    text-align: center;
+    left:20%;
+    display: inline-block;
+    width: 19.9%;
+}
+
+.habits{display: inline-block;
+    text-align: center;
+    left: 40%;
+    position: fixed;
+    width: 19.9%;}
+
+.skin{display: inline-block;
+    text-align: center;
+    left: 60%;
+    position: fixed;
+width:19.9%}
+
+.about{
+    display:inline-block;
+    left:80%;
+    text-align: center;
+    position: fixed;
+    
+    width:19.8%
+}
