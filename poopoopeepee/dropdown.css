@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative; /* Set position to relative for the container */
+    margin-top: 180px; /* Adjust this value to move content down */
+}
+
+.column {
+    width: 30%;
+    position: relative; /* Set position to relative for the column */
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    transform: scale(1.02); /* Scale up slightly */
+}
+
+.text {
+    display: block; /* Change to block for display */
+    opacity: 0; /* Start with opacity 0 */
+    margin-top: 10px;
+    text-align: left;
+    transition: opacity 1s ease; /* Increased duration for opacity transition */
+}
+
+.show {
+    opacity: 1; /* Fade in effect */
+}
+
+/* Vertical lines */
+.column::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 102%; /* Position to the right of the column */
+    width: 2px; /* Width of the line */
+    height: calc(100vh - 60px); /* Adjust to the height of the viewport minus space for the button */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Fade effect */
+    transform: translateY(-10%); /* Center the line vertically */
+    z-index: 0; /* Ensure it stays behind the content */
+}
+
+.container .column:last-child::after {
+    display: none; /* Hide line for the last column */
+}
+
+
