@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Self-Assessment</title>
+    <link href="mentalhealth.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            display: none;
+            margin-bottom: 15px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .question.active {
+            display: block;
+            opacity: 1;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body id="title2"></body>
+    <div class="header-wrapper">
+        <div class="container2">
+            <div class="column2">
+                <div class="button2 home">
+                    <a href="index.html">Home</a>
+                </div>
+                <p class="text2 hidden">Welcome to our website! Explore the various sections.</p>
+            </div>
+
+            <div class="column2">
+                <div class="button2 hygiene">
+                    <a href="hygiene.html">Hygiene</a>
+                </div>
+                <p class="text2 hidden">Click here to learn about hygiene products and tips to maintain healthy hygienic habits. This subpage contains information on the best products to use, guides on how to yield the best results, and advice on how to build positive reinforcement.</p>
+            </div>
+
+            <div class="column2">
+                <div class="button2 skin">
+                    <a href="skincare.html">Skin Care</a>
+                </div>
+                <p class="text2 hidden">Click here to learn about daily routines, targeted solutions, and resources. These modules will help you take care of your skin and keep it healthy and radiant.</p>
+            </div>
+
+            <div class="column2">
+                <div class="button2 mental">
+                    <a href="mentalhealth.html">Mental Health</a>
+                </div>
+                <p class="text2 hidden">Click here to learn about mental health, how to manage stress, taking care of your emotional wellbeing, and finding resources to help you in times of crisis. You can take a quiz that will help you identify your needs.</p>
+            </div>
+
+            <div class="column2">
+                <div class="button2 fitness">
+                    <a href="fitness.html">Fitness</a>
+                </div>
+                <p class="text2 hidden">Click here to learn about hydration, nutrition, excersizes/activities. Our interactive modules come with two calculators that can help you find your required daily water intake and your daily caloric intake.</p>
+            </div>
+
+            <div class="column2">
+                <div class="button2 about">
+                    <a href="about.html">About Us</a>
+                </div>
+                <p class="text2 hidden">Click here to learn about the creators of this website.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<h1>Welcome to our Mental Health section!</h1>
+<h2 class = "yap">Mental health is a vital component of overall well-being, influencing how we think, feel, and act. Mental health affects our ability to handle stress, relate to others, and make decisions. Just like physical health, maintaining good mental health requires effort and attention. Our mental health section provides valuable resources and strategies to help you nurture your mind and achieve a balanced, fulfilling life. 
+   <br> The first step is recognising you need help, which is why we have made a little quiz for you to assess yourselves, found under the **Emotional Well-being** module. 
+    
+</h2>
+
+<img class = "runningImage" src = "https://www.ucheck.co.uk/wp-content/uploads/mental-health-2313426_1280.png"style="transform: translate(350px,-300px);" width="500px" height="350px">
+<div class="container">
+<div class="column">
+  <div class="button deodorant">Emotional Well-Being</div>
+  <div class = "text hide1">
+  <p class="hide1"><div><h3 class = "hide1">Explore methods to enhance your emotional health, including building resilience, practising self-compassion, and fostering positive relationships. Understand the importance of acknowledging and expressing your emotions in a healthy way. 
+   <br> Feel free to fill out the following quiz to determine if you require our resources. 
+     </h3> <br><br><br>
+     <h1>Mental Health Self-Assessment</h1>
+     <br><br>
+     <form id="assessmentForm">
+         <div class="question" id="question1">
+             <label>1. How often do you feel overwhelmed by stress or anxiety?</label><br>
+             <input type="radio" name="q1" value="1"> Rarely<br>
+             <input type="radio" name="q1" value="2"> Sometimes<br>
+             <input type="radio" name="q1" value="3"> Often<br>
+             <br>
+             <button type="button" onclick="showNextQuestion(1)">Next</button>
+         </div>
+         <div class="question" id="question2">
+             <label>2. How frequently do you experience feelings of sadness or hopelessness?</label><br>
+             <input type="radio" name="q2" value="1"> Rarely<br>
+             <input type="radio" name="q2" value="2"> Sometimes<br>
+             <input type="radio" name="q2" value="3"> Often<br>
+             <br>
+             <button type="button" onclick="showNextQuestion(2)">Next</button>
+         </div>
+         <div class="question" id="question3">
+             <label>3. How often do you find it difficult to concentrate or make decisions?</label><br>
+             <input type="radio" name="q3" value="1"> Rarely<br>
+             <input type="radio" name="q3" value="2"> Sometimes<br>
+             <input type="radio" name="q3" value="3"> Often<br>
+             <br>
+             <button type="button" onclick="showNextQuestion(3)">Next</button>
+         </div>
+         <div class="question" id="question4">
+             <label>4. How frequently do you feel disconnected from friends or family?</label><br>
+             <input type="radio" name="q4" value="1"> Rarely<br>
+             <input type="radio" name="q4" value="2"> Sometimes<br>
+             <input type="radio" name="q4" value="3"> Often<br>
+             <br>
+             <button type="button" onclick="showNextQuestion(4)">Next</button>
+         </div>
+         <div class="question" id="question5">
+             <label>5. How often do you struggle with maintaining a healthy sleep pattern?</label><br>
+             <input type="radio" name="q5" value="1"> Rarely<br>
+             <input type="radio" name="q5" value="2"> Sometimes<br>
+             <input type="radio" name="q5" value="3"> Often<br>
+             <br>
+             <button type="button" onclick="calculateResult()">Submit</button>
+         </div>
+     </form>
+     <div class="result" id="result"></div>
+ 
+     <script>
+         document.getElementById('question1').classList.add('active');
+ 
+         function showNextQuestion(currentQuestion) {
+             const currentDiv = document.getElementById('question' + currentQuestion);
+             const nextDiv = document.getElementById('question' + (currentQuestion + 1));
+             currentDiv.classList.remove('active');
+             setTimeout(() => {
+                 nextDiv.classList.add('active');
+             }, 1000);
+         }
+ 
+         function calculateResult() {
+             const form = document.getElementById('assessmentForm');
+             let totalScore = 0;
+             for (let i = 1; i <= 5; i++) {
+                 const question = form['q' + i];
+                 for (const option of question) {
+                     if (option.checked) {
+                         totalScore += parseInt(option.value);
+                     }
+                 }
+             }
+             const resultDiv = document.getElementById('result');
+             if (totalScore <= 5) {
+                 resultDiv.textContent = 'Your mental health seems to be in good shape. Keep maintaining healthy habits!';
+             } else if (totalScore <= 10) {
+                 resultDiv.textContent = 'You might be experiencing some mental health challenges. Consider seeking additional support or resources.';
+             } else {
+                 resultDiv.textContent = 'It seems like you might need mental health assistance. Please reach out to a mental health professional for support.';
+             }
+         }
+     </script>
+
+</div>
+</div>
+</div>
+
+<div class="column">
+  <div class="button shampoo">Stress Management</div>
+  <div class = "text hide2">
+    <h2 class = "exercise">Ways to manage your stress</h2><b><h3>1. Mediation</h4></b>
+    <h3 >Spend a few minutes each day practicing meditation. Focus on your breath and let go of any distracting thoughts.
+    </h3>
+    <b><h3>2. Deep Breathing:</h3></b>
+    <h3>Practice deep breathing exercises to calm your mind and reduce stress. Inhale deeply through your nose, hold for a few seconds, and exhale slowly through your mouth.
+    </h3>
+  <b> <h3> 3. Mindful Walking</h3></b>
+   <h3> Take a walk and focus on the sensations of your steps, the sounds around you, and the feeling of the air on your skin.</h3>
+</div>
+</div>
+
+<div class="column">
+  <div class="button habits">Mental Health Resources</div>
+  <div class = "text hide3">
+    
+  <p class = "hide3"><h2 class = "exercise">Crisis and Emergency Support
+</h2><h3><ul><li><b>Kids Help Phone:</b> Free, 24/7, confidential e‑mental health service offering support in English and French to children and youth ages 5 to 20 through phone, text, and online resources. Toll-free: 1-800-668-68681.</li>
+
+<li><b>Distress and Crisis Ontario: </b>Provides support and a variety of services to their communities, including a chat function. </li>
+</ul></h3> <br>
+<h2>General Mental Health Resources
+</h2>
+<h3>
+    <ul>
+        <li><b>Canadian Mental Health Association (CMHA):</b> Provides a wide range of mental health services and resources across Ontario.
+        </li>
+        <li><b>eMentalHealth.ca: </b>Offers information on mental health conditions, counselling, therapy, crisis and emergency services, and support groups in Ontario.
+        </li>
+    </ul>
+</h3>
+</div>
+
+    </p>
+</div>
+   
+    <script src="scripts.js"></script>
+</body>
+</html>

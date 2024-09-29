@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative; /* Set position to relative for the container */
+    margin-top: -340px; /* Adjust this value to move content down */
+}
+h1{
+    position: relative;
+    top: 30px;
+    left:6%;
+    text-align: left;
+}
+.yap{
+    position:relative;
+    top: 50px;
+    left:1%;
+    width:42%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+h4 .list{
+    position:relative;
+    left:2%;
+    width:35%;
+    top:65px;
+}
+.calcHeader{
+    position:relative;
+    text-align: center;
+    margin-left: -60px;
+    margin-bottom: 40px;
+}
+li{
+    margin-top:20px;
+}
+.column {
+    width: 30%;
+    position: relative; /* Set position to relative for the column */
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    transform: scale(1.02); /* Scale up slightly */
+}
+
+.text {
+    display: block; /* Change to block for display */
+    opacity: 0; /* Start with opacity 0 */
+    margin-top: 10px;
+    text-align: left;
+    transition: opacity 1s ease; /* Increased duration for opacity transition */
+}
+
+.calcButton{
+    position: relative;
+    margin-left:190px;
+}
+
+.enterGender{
+    position:relative;
+    margin-left: 95px;
+}
+.show {
+    opacity: 1; /* Fade in effect */
+}
+
+/* Vertical lines */
+.column::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 102%; /* Position to the right of the column */
+    width: 2px; /* Width of the line */
+    height: calc(100vh - 60px); /* Adjust to the height of the viewport minus space for the button */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Fade effect */
+    transform: translateY(-10%); /* Center the line vertically */
+    z-index: 0; /* Ensure it stays behind the content */
+}
+
+.container .column:last-child::after {
+    display: none; /* Hide line for the last column */
+}
+/* General Styles */
+#title2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4; /* Light background for better contrast */
+}
+
+/* Header Wrapper Styles */
+.header-wrapper {
+    background-color: #ffffff; /* White background for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    margin: 20px auto; /* Center the box with margin */
+    max-width: 90%; /* Limit the width */
+}
+.image-container {
+    width: 600px;   /* Set reasonable container width */
+    height: auto;   /* Height will adjust based on the image */
+    transform: translate(700px, -430px);  /* Adjusted translation for better positioning */
+    overflow: hidden;  /* Ensures no overflow if the image is larger than the container */
+  }
+  
+  .adjustable-image {
+    width: 100%;   /* Make the image take up 100% of the container's width */
+    height: auto;  /* Maintain aspect ratio */
+    display: block; /* Removes any space below the image */
+  }
+/* Container to hold columns */
+.container2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between columns */
+    position: relative; /* Position for vertical lines */
+    margin-top: 0; /* Reset margin */
+}
+
+/* Column Styles */
+.column2 {
+    width: 16%; /* Adjusted width for each column to fit more items */
+    position: relative; /* Position for vertical lines */
+}
+
+/* Button Styles */
+.button2 {
+    background-color: #31f826; /* Primary button color */
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    position: relative; /* Relative for dropdown positioning */
+    text-align: center; /* Center the text inside the button */
+}
+
+.button2 a {
+    color: white; /* Keep the text color white */
+    text-decoration: none; /* Remove the underline */
+    display: block; /* Ensure the entire button area is clickable */
+    width: 100%;
+    height: 100%;
+}
+
+.button2:hover {
+    background-color: #0a6e05; /* Darker shade for hover effect */
+    transform: scale(1.02); /* Scale up slightly */
+}
+
+/* Text (Dropdown) Styles */
+.text2 {
+    display: block; /* Block for better positioning */
+    opacity: 0; /* Start hidden */
+    margin-top: 10px; /* Space between button and text */
+    text-align: left; /* Align text to the left */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+    background-color: #fff; /* White background for dropdown */
+    padding: 10px; /* Padding for dropdown text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+    position: absolute; /* Positioning for dropdown */
+    left: 50%; /* Center align */
+    transform: translateX(-50%); /* Centering correction */
+    width: 300px; /* Set a specific width for the dropdown */
+    max-width: 80%; /* Limit to 80% of the parent container's width */
+    min-width: 150px; /* Optional: minimum width */
+}
+
+/* Show dropdown on hover */
+.column2:hover .text2 {
+    opacity: 1; /* Fade in effect */
+}
+
+.container2 .column2:last-child::after {
+    display: none; /* Hide line for the last column */
+}

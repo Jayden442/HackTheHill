@@ -1,0 +1,142 @@
+.welcome-text {
+    text-align: left; /* Align the text to the left */
+    margin-top: 80px; /* Space above the welcome text */
+    margin-left: 20px; /* Space from the left edge */
+}
+
+.welcome-text b {
+    font-size: 2em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    color: #e2e0e0; /* Darker color for contrast */
+}
+
+.description-container {
+    position: relative; /* Reference for absolute positioning */
+    padding: 0 20px; /* Adds padding on left and right */
+    max-width: 1300px; /* Optional: restrict width */
+    margin: 0 auto; /* Center the container */
+}
+
+.description-text p {
+    color: #e2e0e0; /* Darker color for contrast */
+}
+
+.description-text {
+    position: absolute; /* Position it absolutely within the container */
+    top: -50px; /* Adjust the distance from the top */
+    left: 950px; /* Adjust the distance from the left */
+    color: #555; /* Text color */
+    font-size: 1.2em; /* Font size */
+}
+
+.image-container {
+    position: relative; /* Relative positioning for the container */
+    height: 500px; /* Set a height for the container */
+    width: 100%; /* Full width */
+    border: 1px solid #ccc; /* Optional border for visibility */
+    overflow: hidden; /* Hide any overflow if necessary */
+}
+
+.adjustable-image {
+    position: absolute; /* Positioning the image absolutely */
+    top: 85px; /* Adjust top position */
+    left: 10px; /* Adjust left position */
+    width: 300px; /* Set a desired width */
+    height: auto; /* Maintain aspect ratio */
+    /* You can also set height if needed, e.g., height: 200px; */
+}
+
+
+
+
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #f4f4f4; /* Light background for better contrast */
+    background-image: url(BETTERSELF2.jpg); /* Replace with your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition of the image */
+    background-attachment: fixed; /* Make it fixed while scrolling (optional) */
+}
+
+/* Header Wrapper Styles */
+.header-wrapper {
+    background-color: #73fbf0; /* White background for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    margin: 20px auto; /* Center the box with margin */
+    max-width: 90%; /* Limit the width */
+}
+
+/* Container to hold columns */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between columns */
+    position: relative; /* Position for vertical lines */
+    margin-top: 0; /* Reset margin */
+}
+
+/* Column Styles */
+.column {
+    width: 16%; /* Adjusted width for each column to fit more items */
+    position: relative; /* Position for vertical lines */
+}
+
+/* Button Styles */
+.button {
+    background-color: #31f826; /* Primary button color */
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    position: relative; /* Relative for dropdown positioning */
+    text-align: center; /* Center the text inside the button */
+}
+
+.button a {
+    color: white; /* Keep the text color white */
+    text-decoration: none; /* Remove the underline */
+    display: block; /* Ensure the entire button area is clickable */
+    width: 100%;
+    height: 100%;
+}
+
+.button:hover {
+    background-color: #0a6e05; /* Darker shade for hover effect */
+    transform: scale(1.02); /* Scale up slightly */
+}
+
+/* Text (Dropdown) Styles */
+.text {
+    display: block; /* Block for better positioning */
+    opacity: 0; /* Start hidden */
+    margin-top: 10px; /* Space between button and text */
+    text-align: left; /* Align text to the left */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+    background-color: #fff; /* White background for dropdown */
+    padding: 10px; /* Padding for dropdown text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+    position: absolute; /* Positioning for dropdown */
+    left: 50%; /* Center align */
+    transform: translateX(-50%); /* Centering correction */
+    width: 300px; /* Set a specific width for the dropdown */
+    max-width: 80%; /* Limit to 80% of the parent container's width */
+    min-width: 150px; /* Optional: minimum width */
+}
+
+/* Show dropdown on hover */
+.column:hover .text {
+    opacity: 1; /* Fade in effect */
+}
+
+.container .column:last-child::after {
+    display: none; /* Hide line for the last column */
+}
+
+
